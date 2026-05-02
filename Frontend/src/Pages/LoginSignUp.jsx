@@ -19,7 +19,7 @@ const LoginSignUp = () => {
   const login=async()=>{
     console.log("login execute",formData);
     let responseData;
-    await fetch('http://localhost:4000/login',{
+    await fetch('http://crimson-backend-anwo.onrender.com/login',{
       method:'POST',
       headers:{
         Accept:'application/form-data',
@@ -39,7 +39,7 @@ const LoginSignUp = () => {
   const signup=async()=>{
     console.log("signup execute",formData);
     let responseData;
-    await fetch('http://localhost:4000/signup',{
+    await fetch('http://crimson-backend-anwo.onrender.com/signup',{
       method:'POST',
       headers:{
         Accept:'application/form-data',
