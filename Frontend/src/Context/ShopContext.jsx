@@ -18,11 +18,11 @@ const ShopContextProvider = (props) =>{
     const [cartItems,setcartItems]=useState(getDefultCart())
 
     useEffect(()=>{
-        fetch('http://localhost:4000/allproducts')
+        fetch('http://crimson-backend-anwo.onrender.com/allproducts')
         .then((response)=>response.json()).then((data)=>setAll_products(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getdata',{
+            fetch('http://crimson-backend-anwo.onrender.com/getdata',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -41,7 +41,7 @@ const ShopContextProvider = (props) =>{
         setcartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
         
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/addtocart',{
+            fetch('http://crimson-backend-anwo.onrender.com/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -58,7 +58,7 @@ const ShopContextProvider = (props) =>{
     const removefromCart=(itemId)=>{
         setcartItems((prev)=>({...prev,[itemId]:prev[itemId]-prev[itemId]}));
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/removefromcart',{
+            fetch('http://crimson-backend-anwo.onrender.com/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
