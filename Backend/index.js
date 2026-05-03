@@ -9,9 +9,7 @@ const cors=require("cors");
 const { styleText } = require("util");
 
 app.use(express.json());
-app.use(cors({
-    origin:'https://crimson-frontend-56ky.onrender.com'
-}));
+app.use(cors());
 
 //database connection 
 mongoose.connect("mongodb+srv://suhitaofficial:suhitaofficial20@cluster0.c9d7ekl.mongodb.net/ecommerce")
