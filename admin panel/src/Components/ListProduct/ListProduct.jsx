@@ -10,7 +10,7 @@ const ListProduct = () => {
   const [allproducts,setAllProducts]=useState([]);
 
   const fetchInfo = async()=> {
-    await fetch('http://crimson-backend-anwo.onrender.com/allproducts')
+    await fetch('http://crimson-backend-anwo.onrender.com//allproducts')
     .then((res)=>res.json())
     .then((data)=>{setAllProducts(data)});
   }
@@ -20,7 +20,7 @@ const ListProduct = () => {
 
 
   const remove_product= async(id)=>{
-    await fetch('http://crimson-backend-anwo.onrender.com/removeproduct',{
+    await fetch('http://crimson-backend-anwo.onrender.com//removeproduct',{
        method:'POST',
                 headers:{
                     Accept:'application/json',
